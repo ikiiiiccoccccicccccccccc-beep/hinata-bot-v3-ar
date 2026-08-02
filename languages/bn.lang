@@ -1,0 +1,156 @@
+# index.js
+Goat.newVersionDetected=আপনি %1 ভার্সন ব্যবহার করছেন, সর্বশেষ ভার্সন হলো %2। বোটটি আরও ভালোভাবে ব্যবহার করতে আপনার কনসোল/cmd-তে এই কমান্ডটি টাইপ করে আপডেট করুন: %3
+Goat.autoRestart1=বোটটি %1 এর মধ্যে অটো রিস্টার্ট হবে
+Goat.autoRestart2=ক্রন জব (cron job) দ্বারা বোটটি অটো রিস্টার্ট হবে: %1
+Goat.googleApiTokenExpired=Google API রিফ্রেশ টোকেনের মেয়াদ শেষ হয়ে গেছে বা বাতিল করা হয়েছে, দয়া করে এই লিঙ্কে নতুন টোকেন নিন: https://developers.google.com/oauthplayground/
+
+# bot/login/login.js
+login.currentlyLogged=লগইন করার প্রক্রিয়া চলছে
+login.notFoundDirAccount=%1 ফাইলটি খুঁজে পাওয়া যায়নি
+login.loginToken=অ্যাক্সেস টোকেন দিয়ে লগইন করা হচ্ছে
+login.loginCookieString=কুকি স্ট্রিং দিয়ে লগইন করা হচ্ছে
+login.loginCookieNetscape=কুকি নেটস্কেপ দিয়ে লগইন করা হচ্ছে
+login.loginCookieArray=কুকি অ্যারে দিয়ে লগইন করা হচ্ছে
+login.loginPassword=ইমেইল এবং পাসওয়ার্ড দিয়ে লগইন করা হচ্ছে...
+login.accountError=দয়া করে ফুল পারমিশন টোকেন %1 ফরমেটে অথবা কুকি স্ট্রিং %2 ফরমেটে অথবা কুকি অ্যারে ফরমেটে %7 ফাইলে ইনপুট দিন।
+login.cannotFindAccount=ফেসবুক অ্যাকাউন্ট পাওয়া যায়নি, নিচের অপশনগুলোর একটি বেছে নিন:
+login.chooseAccount=ইমেইল এবং পাসওয়ার্ড দিয়ে লগইন করুন
+login.chooseToken=ফুল পারমিশন টোকেন দিয়ে লগইন করুন
+login.chooseCookieString=কুকি স্ট্রিং দিয়ে লগইন করুন
+login.chooseCookieArray=কুকি অ্যারে দিয়ে লগইন করুন
+login.loginWith=আপনি %1 বেছে নিয়েছেন
+login.inputEmail=> দয়া করে আপনার ফেসবুক ইমেইল (আইডি) বা ফোন নম্বর দিন:
+login.inputPassword=> দয়া করে আপনার পাসওয়ার্ড দিন:
+login.input2FA=> দয়া করে 2FA কোড দিন (যদি চালু না থাকে তবে খালি রাখুন):
+login.inputToken=> দয়া করে আপনার ফুল পারমিশন টোকেন দিন (EAAAA দিয়ে শুরু হওয়া):
+login.inputCookieString=> দয়া করে আপনার কুকি স্ট্রিং দিন:
+login.inputCookieArray=> দয়া করে আপনার কুকি অ্যারে দিন:
+login.refreshCookie=কুকি রিফ্রেশ করা হচ্ছে...
+login.refreshCookieError=কুকি রিফ্রেশ করার সময় একটি ত্রুটি ঘটেছে
+login.refreshCookieSuccess=সফলভাবে কুকি রিফ্রেশ হয়েছে, নতুন কুকি ব্যবহার করতে বোটটি রিস্টার্ট করুন
+login.refreshCookieWarning=আপনি অটো রিফ্রেশ কুকি মোড চালু করেছেন, কিন্তু config.json ফাইলে ইমেইল ও পাসওয়ার্ড সেট করেননি
+login.tokenError=টোকেনটি অবৈধ বা মেয়াদোত্তীর্ণ। দয়া করে %1 ফরমেটে টোকেনটি %2 ফাইলে দিন
+login.cookieError=কুকিটি অবৈধ বা মেয়াদোত্তীর্ণ।
+login.loginPasswordError=config.json ফাইলের ইমেইল ও পাসওয়ার্ড দিয়ে লগইন করার সময় ত্রুটি ঘটেছে
+login.loginSuccess=লগইন সফল হয়েছে
+login.loginError=লগইন করার সময় একটি ত্রুটি ঘটেছে
+login.openDashboardSuccess=বোট ম্যানেজমেন্ট পেজ সফলভাবে খোলা হয়েছে
+login.openDashboardError=বোট ম্যানেজমেন্ট পেজ খোলার সময় একটি ত্রুটি ঘটেছে
+login.changeGbanData=ডেটা পরিবর্তন করা হয়েছে, বোটটি চালু করা বর্তমানে অসম্ভব
+login.errorNoti=মেসেজটি পাওয়ার সময় একটি ত্রুটি ঘটেছে
+login.refreshFbstateSuccess=%1 ফাইলটি রিফ্রেশ করা হয়েছে
+login.refreshFbstateError=%1 ফাইলটি রিফ্রেশ করার সময় একটি ত্রুটি ঘটেছে
+login.youAreBanned=আপনাকে Goat-Bot প্রজেক্ট থেকে ব্যান করা হয়েছে
+login.runBot=বোট সফলভাবে চালু হয়েছে, ইউজারদের মেসেজ গ্রহণ করা শুরু হচ্ছে
+login.notLoggedIn=একটি ত্রুটি ঘটেছে, দয়া করে আপনার ফেসবুক অ্যাকাউন্ট পুনরায় চেক করুন
+login.callBackError=listenMqtt কলব্যাক করার সময় একটি ত্রুটি ঘটেছে
+login.userBanned=আপনাকে বোট ব্যবহার থেকে ব্যান করা হয়েছে!!
+login.checkGbanError=GBAN চেক করার সময় ত্রুটি ঘটেছে, সোর্সটি লেটেস্ট ভার্সনে আপডেট করুন
+login.gbanMessage=আপনাকে %1 তারিখে Goat-Bot প্রজেক্ট থেকে ব্যান করা হয়েছে। কারণ: %2\n» সময়: %3
+login.gbanMessageToDate=আপনাকে %1 তারিখে Goat-Bot প্রজেক্ট থেকে ব্যান করা হয়েছে। কারণ: %2\n» সময়: %3\n» মেয়াদ শেষ: %4
+login.gbanAdminMessage=ইউজার %1-কে %2 তারিখে Goat-Bot প্রজেক্ট থেকে ব্যান করা হয়েছে। কারণ: %3
+login.openServerUptimeSuccess=আপটাইম সার্ভার ওপেন করা হয়েছে: %1
+login.openServerUptimeError=একটি ত্রুটি ঘটেছে, সার্ভার আপটাইম ওপেন করা যাচ্ছে না
+login.restartListenMessage=প্রতি %1 পরপর ListenMQTT রিস্টার্ট চালু করা হয়েছে
+login.stopRestartListenMessage=ListenMQTT রিস্টার্ট বন্ধ করা হয়েছে
+login.restartListenMessageError=ListenMQTT রিস্টার্ট করার সময় একটি ত্রুটি ঘটেছে
+login.restartListenMessage2=সফলভাবে ListenMQTT রিস্টার্ট করা হয়েছে
+login.refreshCookieAfter=%1 পর কুকি রিফ্রেশ করা হচ্ছে
+login.listenMqttClose=ListenMQTT বন্ধ করা হয়েছে
+login.listenMqttCloseByUser=ইউজার দ্বারা ListenMQTT বন্ধ করা হয়েছে
+login.retryCheckLiveCookie=কুকি চেক করার পুনরায় চেষ্টা করা হচ্ছে... %1
+login.startBotSuccess=বোট সফলভাবে শুরু হয়েছে, ইউজারদের থেকে মেসেজ নেওয়া শুরু হচ্ছে
+
+version.tooOldVersion=আপনি Goat-Bot এর অনেক পুরনো ভার্সন ব্যবহার করছেন, cmd-তে %1 লিখে আপডেট করুন
+
+# bot/custom.js
+custom.refreshedFb_dtsg=fb_dtsg এবং jazoest সফলভাবে রিফ্রেশ করা হয়েছে
+custom.refreshedFb_dtsgError=fb_dtsg এবং jazoest রিফ্রেশ করার সময় ত্রুটি ঘটেছে
+
+# bot/login/loadData.js
+loadData.loadThreadDataSuccess=%1টি গ্রুপের ডেটা সফলভাবে লোড হয়েছে!
+loadData.loadUserDataSuccess=%1টি ইউজারের ডেটা সফলভাবে লোড হয়েছে!
+loadData.refreshingThreadData=গ্রুপের তথ্যগুলো আপডেট করা হচ্ছে...
+loadData.refreshThreadDataSuccess=%1টি গ্রুপের তথ্য আপডেট করা হয়েছে!
+loadData.refreshThreadDataError=গ্রুপের তথ্য আপডেট করার সময় কিছু ভুল হয়েছে!
+
+# bot/login/loadScripts.js
+loadScripts.loadScriptsError=%1 ফাইলগুলো লোড করার সময় ত্রুটি ঘটেছে:
+loadScripts.loadScriptsNotMatchOrigin=%1 ফাইলগুলো গিটহাব প্রজেক্টের আসল ফাইলের সাথে মিলছে না।
+loadScripts.NOT_FOUND=আসল সোর্স কোডে খুঁজে পাওয়া যায়নি:
+loadScripts.NOT_MATCH=আসল সোর্স কোডের সাথে মিলছে না:
+
+# bot/login/socketIO.js
+socketIO.connected=socket.io সার্ভারে কানেক্ট হয়েছে
+socketIO.error=socket.io সার্ভারে কানেক্ট করার সময় ত্রুটি ঘটেছে
+
+# bot/handler/handlerCheckData.js
+handlerCheckData.cantCreateThread='%1' আইডি সহ গ্রুপটি ডাটাবেসে সেভ করা যাচ্ছে না!
+handlerCheckData.cantCreateUser='%1' আইডি সহ ইউজারটি ডাটাবেসে সেভ করা যাচ্ছে না!
+
+# bot/handler/handlerEvents.js
+handlerEvents.userBanned=❌ আপনাকে বোট ব্যবহার থেকে ব্যান করা হয়েছে\n» কারণ: %1\n» সময়: %2\n» ইউজার আইডি: %3
+handlerEvents.threadBanned=❌ এই গ্রুপটিকে বোট ব্যবহার থেকে ব্যান করা হয়েছে\n» কারণ: %1\n» সময়: %2\n» গ্রুপ আইডি: %3
+handlerEvents.onlyAdminBox=❌ এই গ্রুপটি বর্তমানে শুধুমাত্র গ্রুপ অ্যাডমিনদের ব্যবহারের জন্য সীমাবদ্ধ।
+handlerEvents.onlyAdminBot=❌ বর্তমানে শুধুমাত্র বোট অ্যাডমিন এই বোটটি ব্যবহার করতে পারবেন।
+handlerEvents.onlyDev=❌ এই কমান্ডটি "%1" শুধুমাত্র বোট ডেভেলপারদের জন্য।
+handlerEvents.onlyVip=❌ এই কমান্ডটি "%1" ভিআইপি (VIP) মেম্বারদের জন্য সংরক্ষিত।
+handlerEvents.onlyNsfw=❌ "%1" কমান্ডটি ব্যবহার করতে আপনার NSFW পারমিশন প্রয়োজন।
+handlerEvents.commandNotFound="%1" নামের কোনো কমান্ড নেই। সব কমান্ড দেখতে %2help লিখুন।
+handlerEvents.commandNotFound2=❌ আপনার ব্যবহৃত কমান্ডটির কোনো অস্তিত্ব নেই। সব কমান্ড দেখতে help লিখুন।
+handlerEvents.commandSyntaxError=ভুল সিনট্যাক্স। নির্দেশের জন্য %1help %2 লিখুন।
+handlerEvents.onlyAdmin=ত্রুটি: শুধুমাত্র গ্রুপ অ্যাডমিনরা "%1" কমান্ডটি ব্যবহার করতে পারবেন।
+handlerEvents.onlyAdminToUseOnReply=ত্রুটি: শুধুমাত্র গ্রুপ অ্যাডমিনরা "%1"-এর রিপ্লাই ফাংশন ব্যবহার করতে পারবেন।
+handlerEvents.onlyAdminToUseOnReaction=ত্রুটি: শুধুমাত্র গ্রুপ অ্যাডমিনরা "%1"-এর রিঅ্যাকশন ফাংশন ব্যবহার করতে পারবেন।
+handlerEvents.onlyAdminBot2=ত্রুটি: শুধুমাত্র বোট অ্যাডমিন "%1" কমান্ডটি ব্যবহার করতে পারবেন।
+handlerEvents.onlyAdminBot2ToUseOnReply=ত্রুটি: শুধুমাত্র বোট অ্যাডমিন "%1"-এর রিপ্লাই ফাংশন ব্যবহার করতে পারবেন।
+handlerEvents.onlyAdminBot2ToUseOnReaction=ত্রুটি: শুধুমাত্র বোট অ্যাডমিন "%1"-এর রিঅ্যাকশন ফাংশন ব্যবহার করতে পারবেন।
+handlerEvents.waitingForCommand=দয়া করে আবার এই কমান্ডটি ব্যবহারের আগে %1 সেকেন্ড অপেক্ষা করুন।
+handlerEvents.errorOccurred=ত্রুটি [%1]\n"%2" কমান্ডে সমস্যা হয়েছে\n\n%3
+handlerEvents.errorOccurred2=ত্রুটি [%1]\n"%2" কমান্ডের onChat-এ সমস্যা হয়েছে\n\n%3
+handlerEvents.errorOccurred3=ত্রুটি [%1]\n"%2" কমান্ডের onReply-তে সমস্যা হয়েছে\n\n%3
+handlerEvents.errorOccurred4=ত্রুটি [%1]\n"%2" কমান্ডের onReaction-এ সমস্যা হয়েছে\n\n%3
+handlerEvents.errorOccurred5=ত্রুটি [%1]\n"%2" কমান্ডের onEvent-এ সমস্যা হয়েছে\n\n%3
+handlerEvents.cannotFindCommandName=ত্রুটি: এই রিপ্লাইটি কার্যকর করার জন্য কমান্ডের নাম খুঁজে পাওয়া যাচ্ছে না!
+handlerEvents.cannotFindCommand=ত্রুটি: এই রিপ্লাইটি কার্যকর করার জন্য "%1" কমান্ডটি খুঁজে পাওয়া যাচ্ছে না!
+
+# bot/autoUptime.js
+autoUptime.autoUptimeTurnedOn=AutoUptime মোড চালু করা হয়েছে
+
+# database/controller/index.js
+indexController.connectingMongoDB=একটি MONGODB ডাটাবেসের সাথে কানেক্ট করা হচ্ছে
+indexController.connectMongoDBSuccess=সফলভাবে mongodb ডাটাবেস কানেক্ট হয়েছে!
+indexController.connectMongoDBError=Mongodb ডাটাবেস কানেক্ট করার সময় ত্রুটি ঘটেছে:
+indexController.connectingMySQL=একটি SQLITE ডাটাবেসের সাথে কানেক্ট করা হচ্ছে
+indexController.connectMySQLSuccess=সফলভাবে SQLITE ডাটাবেস কানেক্ট হয়েছে!
+indexController.connectMySQLError=SQLITE ডাটাবেস কানেক্ট করার সময় ত্রুটি ঘটেছে:
+
+# updater.js
+updater.updateTooFast=দয়া করে সর্বশেষ আপডেটের পর অন্তত ৫ মিনিট অপেক্ষা করুন, আরও %1 মিনিট %2 সেকেন্ড বাকি
+updater.latestVersion=আপনি সর্বশেষ ভার্সনটি ব্যবহার করছেন
+updater.cantFindVersion=আপনি একটি অনির্ধারিত ভার্সন (%1) ব্যবহার করছেন
+updater.newVersions=আপডেট করার জন্য %1টি নতুন ভার্সন আছে, শুরু হচ্ছে...
+updater.updateSuccess=সফলভাবে আপডেট হয়েছে%1
+updater.configChanged=%1 পরিবর্তন করা হয়েছে, দয়া করে config.json চেক করুন
+updater.installingPackages=বোটের প্রয়োজনীয় ডিপেন্ডেন্সিগুলো ইনস্টল করা হচ্ছে...
+updater.installSuccess=ডিপেন্ডেন্সিগুলো সফলভাবে ইনস্টল হয়েছে
+updater.backupSuccess=%1 ফোল্ডারে পরিবর্তিত ফাইলগুলো সফলভাবে ব্যাকআপ নেওয়া হয়েছে
+updater.restartToApply=. নতুন ভার্সনটি কার্যকর করতে বোটটি রিস্টার্ট করুন
+updater.skipFile=%1-এর একটি নতুন ভার্সন আছে, কিন্তু আপনি তা এড়িয়ে গেছেন।
+
+# dashboard/routes/verifyfbid.js
+verifyfbid.sendCode=আপনার ভেরিফিকেশন কোডটি হলো:\n%1\nমেয়াদ %2 মিনিট
+
+# utils.js
+utils.errorOccurred=ত্রুটি: একটি সমস্যা হয়েছে:\n\n%1
+
+# for command
+command.restartedBot=বোট রিস্টার্ট করা হয়েছে
+
+# dashboard/app.js
+app.googleApiRefreshTokenExpired=Google API রিফ্রেশ টোকেনের মেয়াদ শেষ বা বাতিল হয়েছে।
+app.tooManyRequests=অতিরিক্ত রিকোয়েস্ট পাঠানো হয়েছে। দয়া করে কিছুক্ষণ পর চেষ্টা করুন।
+app.notPermissionChangeFbstate=আপনার fbstate পরিবর্তন করার অনুমতি নেই!
+app.notFoundFbstate=দয়া করে fbstate ইনপুট দিন!
+app.changedFbstateSuccess=fbstate সফলভাবে পরিবর্তন করা হয়েছে!
+app.serverError=সার্ভার ত্রুটি, দয়া করে পরে চেষ্টা করুন!

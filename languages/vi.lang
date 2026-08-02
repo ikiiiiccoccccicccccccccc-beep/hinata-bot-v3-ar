@@ -1,0 +1,156 @@
+# index.js
+Goat.newVersionDetected=Bạn đang sử dụng phiên bản %1, phiên bản mới nhất là %2. Vui lòng cập nhật để bot hoạt động tốt hơn bằng cách nhập lệnh vào console/cmd: %3
+Goat.autoRestart1=Bot sẽ tự động khởi động lại sau %1
+Goat.autoRestart2=Bot sẽ tự động khởi động lại theo cron job: %1
+Goat.googleApiTokenExpired=Mã làm mới (refresh token) Google API đã hết hạn hoặc bị thu hồi, vui lòng lấy mã mới tại https://developers.google.com/oauthplayground/
+
+# bot/login/login.js
+login.currentlyLogged=Đang tiến hành đăng nhập
+login.notFoundDirAccount=Không tìm thấy tệp %1
+login.loginToken=Đăng nhập bằng mã access token
+login.loginCookieString=Đăng nhập bằng chuỗi cookie
+login.loginCookieNetscape=Đăng nhập bằng cookie netscape
+login.loginCookieArray=Đăng nhập bằng mảng cookie
+login.loginPassword=Đang đăng nhập bằng email & mật khẩu...
+login.accountError=Vui lòng nhập token full quyền ở dạng %1 hoặc cookie ở dạng chuỗi %2 hoặc cookie ở dạng mảng:\n[\n  { name: %3, value: %4 },\n  { name: %5, value: %6 }\n]\n hoặc\n[\n  { key: %3, value: %4 },\n  { key: %5, value: %6 }\n]\nvào tệp %7
+login.cannotFindAccount=Không tìm thấy tài khoản Facebook, vui lòng chọn một trong các tùy chọn sau:
+login.chooseAccount=Đăng nhập bằng email và mật khẩu
+login.chooseToken=Đăng nhập bằng token full quyền
+login.chooseCookieString=Đăng nhập bằng chuỗi cookie
+login.chooseCookieArray=Đăng nhập bằng mảng cookie
+login.loginWith=Bạn đã chọn %1
+login.inputEmail=> Vui lòng nhập email (id) hoặc số điện thoại tài khoản Facebook:
+login.inputPassword=> Vui lòng nhập mật khẩu:
+login.input2FA=> Vui lòng nhập mã 2FA (để trống nếu bạn không bật 2FA):
+login.inputToken=> Vui lòng nhập token full quyền (bắt đầu bằng EAAAA):
+login.inputCookieString=> Vui lòng nhập chuỗi cookie của bạn:
+login.inputCookieArray=> Vui lòng nhập mảng cookie của bạn:
+login.refreshCookie=Đang làm mới cookie...
+login.refreshCookieError=Đã xảy ra lỗi khi làm mới cookie
+login.refreshCookieSuccess=Làm mới cookie thành công, hãy khởi động lại bot để sử dụng cookie mới
+login.refreshCookieWarning=Bạn đã bật chế độ tự động làm mới cookie, nhưng chưa cấu hình email và mật khẩu trong tệp config.json
+login.tokenError=Token không hợp lệ hoặc đã hết hạn. Vui lòng nhập token full quyền ở dạng %1 vào tệp %2
+login.cookieError=Cookie không hợp lệ hoặc đã hết hạn.
+login.loginPasswordError=Đã xảy ra lỗi khi đăng nhập bằng email & mật khẩu trong config.json
+login.loginSuccess=Đăng nhập thành công
+login.loginError=Đã xảy ra lỗi trong quá trình đăng nhập
+login.openDashboardSuccess=Đã mở trang quản lý bot thành công
+login.openDashboardError=Đã xảy ra lỗi khi mở trang quản lý bot
+login.changeGbanData=DỮ LIỆU ĐÃ BỊ THAY ĐỔI, HIỆN TẠI KHÔNG THỂ KHỞI CHẠY BOT
+login.errorNoti=Đã xảy ra lỗi khi truy xuất tin nhắn
+login.refreshFbstateSuccess=Đã làm mới tệp %1
+login.refreshFbstateError=Đã xảy ra lỗi khi làm mới tệp %1
+login.youAreBanned=Bạn đã bị cấm khỏi dự án Goat-Bot
+login.runBot=Khởi chạy bot thành công, bắt đầu nhận tin nhắn từ người dùng
+login.notLoggedIn=Đã xảy ra lỗi, vui lòng kiểm tra lại tài khoản Facebook của bạn
+login.callBackError=Đã xảy ra lỗi khi gọi lại listenMqtt
+login.userBanned=Bạn đã bị cấm sử dụng bot!!
+login.checkGbanError=Đã xảy ra lỗi khi kiểm tra GBAN, hãy thử cập nhật mã nguồn lên phiên bản mới nhất
+login.gbanMessage=Bạn đã bị cấm khỏi dự án Goat-Bot vào ngày %1 với lý do: %2\n» Thời gian: %3
+login.gbanMessageToDate=Bạn đã bị cấm khỏi dự án Goat-Bot vào ngày %1 với lý do: %2\n» Thời gian: %3\n» Đến ngày: %4
+login.gbanAdminMessage=Người dùng %1 đã bị cấm khỏi dự án Goat-Bot vào ngày %2 vì lý do: %3
+login.openServerUptimeSuccess=Đã mở máy chủ uptime: %1
+login.openServerUptimeError=Đã xảy ra lỗi, không thể mở máy chủ uptime
+login.restartListenMessage=Kích hoạt khởi động lại ListenMQTT mỗi %1
+login.stopRestartListenMessage=Đã tắt khởi động lại ListenMQTT
+login.restartListenMessageError=Đã xảy ra lỗi khi khởi động lại ListenMQTT
+login.restartListenMessage2=Đã khởi động lại ListenMQTT thành công
+login.refreshCookieAfter=Làm mới cookie sau %1
+login.listenMqttClose=ListenMQTT đã đóng
+login.listenMqttCloseByUser=ListenMQTT đã bị đóng bởi người dùng
+login.retryCheckLiveCookie=Đang thử lại kiểm tra cookie... %1
+login.startBotSuccess=Bot đã được khởi động thành công, bắt đầu nhận tin nhắn từ người dùng
+
+version.tooOldVersion=Bạn đang sử dụng phiên bản Goat-Bot quá cũ, vui lòng cập nhật lên phiên bản mới nhất bằng cách nhập lệnh: %1 vào cmd
+
+# bot/custom.js
+custom.refreshedFb_dtsg=Đã làm mới fb_dtsg và jazoest thành công
+custom.refreshedFb_dtsgError=Đã xảy ra lỗi khi làm mới fb_dtsg và jazoest
+
+# bot/login/loadData.js
+loadData.loadThreadDataSuccess=Tải dữ liệu của %1 nhóm thành công!
+loadData.loadUserDataSuccess=Tải dữ liệu của %1 người dùng thành công!
+loadData.refreshingThreadData=Đang cập nhật thông tin của các nhóm...
+loadData.refreshThreadDataSuccess=Đã cập nhật thông tin của %1 nhóm!
+loadData.refreshThreadDataError=Đã xảy ra lỗi khi cập nhật thông tin nhóm!
+
+# bot/login/loadScripts.js
+loadScripts.loadScriptsError=Các tệp %1 đã xảy ra lỗi trong quá trình tải:
+loadScripts.loadScriptsNotMatchOrigin=Các tệp %1 không khớp với tệp gốc trên dự án github.
+loadScripts.NOT_FOUND=KHÔNG TÌM THẤY TRONG MÃ NGUỒN GỐC:
+loadScripts.NOT_MATCH=KHÔNG KHỚP VỚI MÃ NGUỒN GỐC:
+
+# bot/login/socketIO.js
+socketIO.connected=Đã kết nối với máy chủ socket.io
+socketIO.error=Đã xảy ra lỗi khi kết nối với máy chủ socket.io
+
+# bot/handler/handlerCheckData.js
+handlerCheckData.cantCreateThread=Nhóm có id '%1' không thể ghi vào cơ sở dữ liệu!
+handlerCheckData.cantCreateUser=Người dùng có id '%1' không thể ghi vào cơ sở dữ liệu!
+
+# bot/handler/handlerEvents.js
+handlerEvents.userBanned=❌ Bạn đã bị cấm sử dụng bot\n» Lý do: %1\n» Thời gian: %2\n» ID người dùng: %3
+handlerEvents.threadBanned=❌ Nhóm này đã bị cấm sử dụng bot\n» Lý do: %1\n» Thời gian: %2\n» ID nhóm: %3
+handlerEvents.onlyAdminBox=❌ Nhóm này hiện chỉ dành cho quản trị viên nhóm sử dụng.
+handlerEvents.onlyAdminBot=❌ Hiện tại chỉ admin bot mới có thể sử dụng bot này.
+handlerEvents.onlyDev=❌ Lệnh "%1" này chỉ dành cho nhà phát triển bot.
+handlerEvents.onlyVip=❌ Lệnh "%1" này dành riêng cho thành viên VIP.
+handlerEvents.onlyNsfw=❌ Bạn cần quyền NSFW để sử dụng lệnh "%1".
+handlerEvents.commandNotFound=Lệnh "%1" không tồn tại. Nhập %2help để xem tất cả các lệnh.
+handlerEvents.commandNotFound2=❌ Lệnh bạn đang sử dụng không tồn tại. Nhập help để xem tất cả các lệnh.
+handlerEvents.commandSyntaxError=Sai cú pháp. Vui lòng nhập %1help %2 để xem hướng dẫn.
+handlerEvents.onlyAdmin=Lỗi: Chỉ quản trị viên nhóm mới có thể sử dụng lệnh "%1".
+handlerEvents.onlyAdminToUseOnReply=Lỗi: Chỉ quản trị viên nhóm mới có thể sử dụng chức năng phản hồi cho "%1".
+handlerEvents.onlyAdminToUseOnReaction=Lỗi: Chỉ quản trị viên nhóm mới có thể sử dụng chức năng cảm xúc cho "%1".
+handlerEvents.onlyAdminBot2=Lỗi: Chỉ admin bot mới có thể sử dụng lệnh "%1".
+handlerEvents.onlyAdminBot2ToUseOnReply=Lỗi: Chỉ admin bot mới có thể sử dụng chức năng phản hồi cho "%1".
+handlerEvents.onlyAdminBot2ToUseOnReaction=Lỗi: Chỉ admin bot mới có thể sử dụng chức năng cảm xúc cho "%1".
+handlerEvents.waitingForCommand=Vui lòng đợi %1 giây trước khi sử dụng lại lệnh này.
+handlerEvents.errorOccurred=Lỗi [%1]\nĐã xảy ra lỗi trong lệnh "%2"\n\n%3
+handlerEvents.errorOccurred2=Lỗi [%1]\nĐã xảy ra lỗi trong onChat tại lệnh "%2"\n\n%3
+handlerEvents.errorOccurred3=Lỗi [%1]\nĐã xảy ra lỗi trong onReply tại lệnh "%2"\n\n%3
+handlerEvents.errorOccurred4=Lỗi [%1]\nĐã xảy ra lỗi trong onReaction tại lệnh "%2"\n\n%3
+handlerEvents.errorOccurred5=Lỗi [%1]\nĐã xảy ra lỗi trong onEvent tại lệnh "%2"\n\n%3
+handlerEvents.cannotFindCommandName=Lỗi: Không tìm thấy tên lệnh để thực hiện phản hồi này!
+handlerEvents.cannotFindCommand=Lỗi: Không tìm thấy lệnh "%1" để thực hiện phản hồi này!
+
+# bot/autoUptime.js
+autoUptime.autoUptimeTurnedOn=Đã bật chế độ AutoUptime
+
+# database/controller/index.js
+indexController.connectingMongoDB=Đang kết nối cơ sở dữ liệu MONGODB
+indexController.connectMongoDBSuccess=Kết nối cơ sở dữ liệu mongodb thành công!
+indexController.connectMongoDBError=Đã xảy ra lỗi khi kết nối cơ sở dữ liệu Mongodb:
+indexController.connectingMySQL=Đang kết nối cơ sở dữ liệu SQLITE
+indexController.connectMySQLSuccess=Kết nối cơ sở dữ liệu SQLITE thành công!
+indexController.connectMySQLError=Đã xảy ra lỗi khi kết nối với cơ sở dữ liệu SQLITE:
+
+# updater.js
+updater.updateTooFast=Vui lòng đợi ít nhất 5 phút sau lần commit cuối cùng để cập nhật, còn lại %1p %2s
+updater.latestVersion=Bạn đang sử dụng phiên bản mới nhất
+updater.cantFindVersion=Bạn đang sử dụng một phiên bản không xác định (%1)
+updater.newVersions=Có %1 phiên bản mới để cập nhật, đang bắt đầu...
+updater.updateSuccess=Cập nhật thành công%1
+updater.configChanged=%1 đã được thay đổi, vui lòng kiểm tra config.json
+updater.installingPackages=Đang cài đặt các phụ thuộc (dependencies) cho bot...
+updater.installSuccess=Cài đặt phụ thuộc thành công
+updater.backupSuccess=Đã sao lưu thành công các tệp thay đổi trong thư mục %1
+updater.restartToApply=. Khởi động lại bot để áp dụng phiên bản mới
+updater.skipFile=Có phiên bản mới của %1, nhưng bạn đã bỏ qua nó.
+
+# dashboard/routes/verifyfbid.js
+verifyfbid.sendCode=Mã xác thực của bạn là:\n%1\nCó hiệu lực trong %2 phút
+
+# utils.js
+utils.errorOccurred=Lỗi: Đã xảy ra lỗi:\n\n%1
+
+# for command
+command.restartedBot=Bot đã được khởi động lại
+
+# dashboard/app.js
+app.googleApiRefreshTokenExpired=Mã làm mới Google API đã hết hạn hoặc bị thu hồi.
+app.tooManyRequests=Quá nhiều yêu cầu. Vui lòng thử lại sau.
+app.notPermissionChangeFbstate=Bạn không có quyền thay đổi fbstate!
+app.notFoundFbstate=Vui lòng nhập fbstate!
+app.changedFbstateSuccess=Thay đổi fbstate thành công!
+app.serverError=Lỗi máy chủ, vui lòng thử lại sau!
