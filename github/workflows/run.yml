@@ -1,0 +1,26 @@
+name: Hinata Bot V3 Auto Runner
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # يتيح لك تشغيل وتوقيف البوت يدوياً بضغطة زر من تبويب Actions
+
+jobs:
+  run-hinata-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. جلب أكواد البوت من المستودع
+        uses: actions/checkout@v4
+
+      - name: 2. إعداد بيئة Node.js (الإصدار 20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 3. تثبيت حزم وتدابير البوت (Dependencies)
+        run: npm install
+
+      - name: 4. بدء تشغيل هيناتا بوت
+        run: npm start
